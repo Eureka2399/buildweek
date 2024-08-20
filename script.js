@@ -4,7 +4,7 @@
         type: "multiple",
         difficulty: "easy",
         question: "What does CPU stand for?",
-        correct_answer: "Central Processing Unit",
+        correct_answer: "Central Processing Unit", 
         incorrect_answers: [
           "Central Process Unit",
           "Computer Personal Unit",
@@ -98,4 +98,80 @@
       },
     ];
 
-    
+    //#####SCRIPT#####
+    let indexQuestion=0
+    let punteggio=0
+
+
+    function Question(index){
+      /*
+      FUNZIONE per la generazione della domanda secondo l'indice domande
+      */
+      let variableQuestion = document.getElementById('variabileDomanda')
+      let scritta = variableQuestion.innerText=questions[index].question
+      document.getElementById("variabileDomanda").innerText=scritta
+    }
+
+    function Answer(index){
+      /*
+      FUNZIONE per la generazione delle risposte randomizzando la prima di posizione e piazzando le rimanenti sui i blocchi liberi
+      */
+      let button = document.getElementsByTagName("button")
+      let RandomCorrect=NumeroCasuale() //GENERO UN NUMERO CAUSALE PER POSIZIONARE LA RISPOSTA ESATTA (AD OGNI REFRESH AVRA' POSIZIONE DIVERSA)
+      button[RandomCorrect].innerText=questions[index].correct_answer
+
+      switch(RandomCorrect){
+        case 0:{
+          button[1].innerText=questions[index].incorrect_answers[0]
+          button[2].innerText=questions[index].incorrect_answers[1]
+          button[3].innerText=questions[index].incorrect_answers[2]
+          break
+        }
+        case 1:{
+          button[0].innerText=questions[index].incorrect_answers[0]
+          button[2].innerText=questions[index].incorrect_answers[1]
+          button[3].innerText=questions[index].incorrect_answers[2]
+          break
+        }
+        case 2:{
+          button[0].innerText=questions[index].incorrect_answers[0]
+          button[1].innerText=questions[index].incorrect_answers[1]
+          button[3].innerText=questions[index].incorrect_answers[2]
+          break
+        }
+        case 3:{
+          button[0].innerText=questions[index].incorrect_answers[0]
+          button[1].innerText=questions[index].incorrect_answers[1]
+          button[2].innerText=questions[index].incorrect_answers[2]
+          break
+        }
+      }
+      return CorrectAnswer=RandomCorrect
+    }
+
+
+    let button = document.getElementsByTagName("button")
+    function InvioRisposta(risposta){
+      let check = risposta
+      let corretto
+      if(check==button[0].value){
+        corretto=button[0].value
+      }
+    }
+
+
+
+
+    Question(0)
+    InvioRisposta(Answer(0))
+
+    function NumeroCasuale(){
+      /*
+        FUNZIONE GENERA NUMERO CASUALE
+      */
+      let num = Math.round(Math.random()*3)
+      return num 
+    }
+
+
+

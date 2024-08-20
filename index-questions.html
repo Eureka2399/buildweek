@@ -1,59 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Questions</title>
-</head>
+  </head>
 
-<body>
-    <header><img class="logo" src="assets/epicode_logo.png" alt="Logo"></header>
+  <body>
+    <header>
+      <img class="logo" src="assets/epicode_logo.png" alt="Logo" />
+    </header>
     <div>
-        <h1 class="questionText"> <span style="font-weight: 200;">Question </span><br> text test</h1>
+      <h1 class="questionText">
+        <span style="font-weight: 200">Question </span><br />
+        text test
+      </h1>
     </div>
     <div>
-        <p>
-            <span>
-
-            </span>
-        </p>
+      <p id="variabileDomanda">
+        
+      </p>
     </div>
-    <form action="submit">
-        <input id="answerOne" type="radio" name="answerOne">
-        <label for="answerOne"> Answer test. </label>
-
-        <input id="answerTwo" type="radio" name="answerTwo">
-        <label for="answerTwo"> Answer test. </label>
-
-        <input id="answerThree" type="radio" name="answerThree">
-        <label for="answerThree"> Answer test. </label>
-
-        <input id="answerFour" type="radio" name="answerFour">
-        <label for="answerFour"> Answer test. </label>
-
-        <button id="submit">SUBMIT</button>
+        <button id="answerOne" value="1" onclick="InvioRisposta()">Answer Test</button>
+        <button id="answerTwo" value="2">Answer Test</button>
+        <button id="answerThree" value="3" >Answer Test</button>  
+        <button id="answerFour" value="4" >Answer Test</button>
     </form>
     <div>
-        <p> Question
-            <span class="questionNumber">
-                1
-            </span>
-            /10
-        </p>
+      <p>
+        Question
+        <span class="questionNumber"> 1 </span>
+        /10
+      </p>
     </div>
-</body>
-<script src="script.js"></script>
+  </body>
+  <script src="script.js"></script>
 </html>
